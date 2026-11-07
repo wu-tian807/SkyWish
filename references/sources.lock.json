@@ -1,0 +1,1584 @@
+{
+  "schemaVersion": 1,
+  "scope": "Cities: Skylines II; source references, not runtime dependencies",
+  "repositories": [
+    {
+      "repository": "LancerComet/cities-skylines-2-mcp",
+      "role": "MCP、游戏线程队列、原生建造与公共交通",
+      "license": "Apache-2.0",
+      "review": "优先研究桥接和公交实现",
+      "directory": "third_party/LancerComet-cities-skylines-2-mcp",
+      "url": "https://github.com/LancerComet/cities-skylines-2-mcp.git",
+      "commit": "72bd7e0bfa01c8d263d2a069a468b413318e8bb8",
+      "branch": "master",
+      "commitDate": "2026-10-20T00:40:03+08:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "f1f57b7358f5788a9e67fbeb2390b0b552003043b0c4a3ff21aa4cf5f5ec1362"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "nachocheesedog/cs2-mcp",
+      "role": "建造预览、撤销、地图观察、Blender 资产流水线",
+      "license": "MIT",
+      "review": "实验性；资产导入和保存须实测",
+      "directory": "third_party/nachocheesedog-cs2-mcp",
+      "url": "https://github.com/nachocheesedog/cs2-mcp.git",
+      "commit": "20bb131ba863e3e349b59d6dbdaec6a98aebb27f",
+      "branch": "main",
+      "commitDate": "2026-10-09T15:42:07-04:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "2b52dadd04783784cb99cf6e70f003345b464b6253da423487f3c6c7aaa4da6b"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Mimonsi/CS2-VehicleController",
+      "role": "车辆模板、生成概率、速度和加速度",
+      "license": "unconfirmed",
+      "review": "公开源码；未找到仓库许可证文件，暂不复制到自有实现",
+      "directory": "third_party/Mimonsi-CS2-VehicleController",
+      "url": "https://github.com/Mimonsi/CS2-VehicleController.git",
+      "commit": "e7394078cd8b4ff20960f72314f5654b1c7fa2df",
+      "branch": "main",
+      "commitDate": "2026-02-24T14:20:05+01:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "northernst11-bot/BetaTestDrivingMod",
+      "role": "原生车辆接管、车道占用、控制权交还",
+      "license": "MIT",
+      "review": "技术参考；不是已实现的任意轨迹 API",
+      "directory": "third_party/northernst11-bot-BetaTestDrivingMod",
+      "url": "https://github.com/northernst11-bot/BetaTestDrivingMod.git",
+      "commit": "eefd6bb4fe2dcc479df837a1678f3529ac6e0f76",
+      "branch": "main",
+      "commitDate": "2026-06-17T05:19:57-05:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "691494c6a3b6e66e465a407b0c372a51bb647e58baf72702f41931663ded5e67"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "yenyang/CS2-MoveIt",
+      "role": "对象选择、移动、旋转、更新与撤销",
+      "license": "MIT",
+      "review": "当前研究入口；保留 Quboid 原仓库比较",
+      "directory": "third_party/yenyang-CS2-MoveIt",
+      "url": "https://github.com/yenyang/CS2-MoveIt.git",
+      "commit": "f69831ef4ecd6736e9705c827bcdc43300ee1ab1",
+      "branch": "main",
+      "commitDate": "2026-09-14T20:31:52-07:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "ef45becc9858f3cd51bcceb88907f65d08568d4494e2346ba65be8a07d907489"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Quboid/CS2-MoveIt",
+      "role": "Move It 原实现与历史比较",
+      "license": "MIT",
+      "review": "与 yenyang 版本有重叠，不同时装入游戏",
+      "directory": "third_party/Quboid-CS2-MoveIt",
+      "url": "https://github.com/Quboid/CS2-MoveIt.git",
+      "commit": "6bde569f1c4ad5a7702340934ad0e6f92ef08393",
+      "branch": "main",
+      "commitDate": "2025-07-18T22:02:56+01:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "e8c2e412ada24de4bb1a862a722f4c5bc697248288da5b6439d1bb93053641dc"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "1Chrakv/Unsquare",
+      "role": "建筑笼式变形、资产变体、保存恢复",
+      "license": "GPL-3.0",
+      "review": "Flex It 同类参考；外观变形不等于模拟地块改变",
+      "directory": "third_party/1Chrakv-Unsquare",
+      "url": "https://github.com/1Chrakv/Unsquare.git",
+      "commit": "4df151dd64b6994d9adc5d0f53de70a99e0133bd",
+      "branch": "master",
+      "commitDate": "2026-10-31T16:45:37+01:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "555b97ae7ce95f54a167cba71788ed7ccae2e3f1ccef57ff2e4fc6db4fc0c3aa"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "yenyang/Anarchy",
+      "role": "放置限制、吸附与对象更新",
+      "license": "MIT",
+      "review": "研究放置流程；不默认绕开所有游戏校验",
+      "directory": "third_party/yenyang-Anarchy",
+      "url": "https://github.com/yenyang/Anarchy.git",
+      "commit": "22880bcb05f8a4e735bb7eb3cefaa4e4b47711f9",
+      "branch": "master",
+      "commitDate": "2026-09-20T08:37:58-07:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "38278a2d2c02a54914160622f17e1c8421c09140208c60fe2549f87657c53621"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "yenyang/Recolor",
+      "role": "颜色、实例与模板编辑范围、保存",
+      "license": "MIT",
+      "review": "区分单实例、变体和全局模板修改",
+      "directory": "third_party/yenyang-Recolor",
+      "url": "https://github.com/yenyang/Recolor.git",
+      "commit": "a3d91af3812e60455fab2dc5787eb8696c689f30",
+      "branch": "master",
+      "commitDate": "2026-09-20T09:27:29-07:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "38278a2d2c02a54914160622f17e1c8421c09140208c60fe2549f87657c53621"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "algernon-A/LineTool-CS2",
+      "role": "沿直线和曲线批量摆放",
+      "license": "Apache-2.0",
+      "review": "场景布置参考；不是演员运动时间轴",
+      "directory": "third_party/algernon-A-LineTool-CS2",
+      "url": "https://github.com/algernon-A/LineTool-CS2.git",
+      "commit": "9516bdeda05873a4b36ce8c9f324effaa81f423d",
+      "branch": "master",
+      "commitDate": "2026-11-04T09:53:04+11:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Cgameworld/FirstPersonCameraContinued",
+      "role": "第一人称和居民、车辆跟随镜头",
+      "license": "GPL-2.0",
+      "review": "研究相机和跟随；未做运行兼容性测试",
+      "directory": "third_party/Cgameworld-FirstPersonCameraContinued",
+      "url": "https://github.com/Cgameworld/FirstPersonCameraContinued.git",
+      "commit": "50abd46dd3a80d74c256eeb5c3e7db8da60706ec",
+      "branch": "main",
+      "commitDate": "2026-09-27T22:26:53-07:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "189b1af95d661151e054cea10c91b3d754e4de4d3fecfb074c1fb29476f7167b"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "lemmy101/Skylines2_CinematicRendererMod",
+      "role": "电影渲染与帧捕获",
+      "license": "GPL-2.0",
+      "review": "旧 BepInEx 项目，只作历史技术参考",
+      "directory": "third_party/lemmy101-Skylines2_CinematicRendererMod",
+      "url": "https://github.com/lemmy101/Skylines2_CinematicRendererMod.git",
+      "commit": "9fe39f1aec8095628ab282b3aaea0cc2368a9c35",
+      "branch": "main",
+      "commitDate": "2024-01-10T16:48:16Z",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "189b1af95d661151e054cea10c91b3d754e4de4d3fecfb074c1fb29476f7167b"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "algernon-A/PlopTheGrowables",
+      "role": "手动放置分区建筑、等级与建筑生命周期",
+      "license": "Apache-2.0",
+      "review": "观察城市规则如何影响摆放后的建筑",
+      "directory": "third_party/algernon-A-PlopTheGrowables",
+      "url": "https://github.com/algernon-A/PlopTheGrowables.git",
+      "commit": "73d0e0f3c2eff02866f36d950629f30779dd2d04",
+      "branch": "master",
+      "commitDate": "2026-05-18T14:11:26+10:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "JadHajjar/FindIt-CSII",
+      "role": "资产检索、分类和工具选择",
+      "license": "unconfirmed",
+      "review": "csproj 声明 MIT，但未找到完整 LICENSE；暂不复制到自有实现",
+      "directory": "third_party/JadHajjar-FindIt-CSII",
+      "url": "https://github.com/JadHajjar/FindIt-CSII.git",
+      "commit": "cf41fcecba69e01dda9cf8522efc5cf0af536443",
+      "branch": "main",
+      "commitDate": "2026-10-21T19:47:28+02:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "JadHajjar/RoadBuilder-CSII",
+      "role": "实时组合道路、轨道模板与保存",
+      "license": "MIT",
+      "review": "道路资产生成；不等于公交线路编辑",
+      "directory": "third_party/JadHajjar-RoadBuilder-CSII",
+      "url": "https://github.com/JadHajjar/RoadBuilder-CSII.git",
+      "commit": "5f4b1ab5d1a5ce4f8d05e4fc89c354f3a1d53485",
+      "branch": "main",
+      "commitDate": "2026-10-18T21:32:58+02:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "a929e873e3b312ab7ee1678fe7eb6b46f25652f250a5c3f97e9c70dcec003bfe"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "krzychu124/Traffic",
+      "role": "车道连接和通行优先级",
+      "license": "unconfirmed",
+      "review": "公开源码；未找到仓库许可证文件，暂不复制到自有实现",
+      "directory": "third_party/krzychu124-Traffic",
+      "url": "https://github.com/krzychu124/Traffic.git",
+      "commit": "ce1551f19d0341d7a4a6bb126daa515c6c021b43",
+      "branch": "main",
+      "commitDate": "2026-09-14T20:40:03+02:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "viktorsx/Copaste",
+      "role": "组合复制、蓝图与重复摆放",
+      "license": "MIT",
+      "review": "场景组合参考；尚未实测",
+      "directory": "third_party/viktorsx-Copaste",
+      "url": "https://github.com/viktorsx/Copaste.git",
+      "commit": "133ced6f8a6a647063a891595dca3ff2a4c6215f",
+      "branch": "main",
+      "commitDate": "2026-10-27T01:13:10+01:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "18b13b24eedb77f7f27a395923c72e191901ddb04ae0e30cd5a0172dd08a4b86"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "qstar-inc/cities2-objects",
+      "role": "可用游戏对象索引和网页浏览",
+      "license": "CC-BY-SA-4.0",
+      "review": "已查阅上游说明或源文件",
+      "category": "资产与道具",
+      "kind": "工具",
+      "directory": "third_party/qstar-inc-cities2-objects",
+      "url": "https://github.com/qstar-inc/cities2-objects.git",
+      "commit": "768c44b5988e400678d0c04c4a579c9787c62eee",
+      "branch": "main",
+      "commitDate": "2024-10-08T00:22:03+06:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "6c2ddc33a1d339efcdfceb64a3c9cd2f18c7de0ff2f0c3952a99970ee8f0385f"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "CitiesSkylinesModding/CS2-AssetPacksManager",
+      "role": "资产包缩略图、本地化和兼容处理",
+      "license": "unconfirmed",
+      "review": "较早的自定义资产导入流程也保留作历史参考。根目录许可待确认",
+      "category": "资产与道具",
+      "kind": "模组",
+      "directory": "third_party/CitiesSkylinesModding-CS2-AssetPacksManager",
+      "url": "https://github.com/CitiesSkylinesModding/CS2-AssetPacksManager.git",
+      "commit": "1561e1fcc4727a596945df9e84c24825e42cbecd",
+      "branch": "main",
+      "commitDate": "2025-12-04T10:49:41+01:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "AlphaGaming7780/ExtraAssetsImporter",
+      "role": "自定义地表材质和贴花导入",
+      "license": "unconfirmed",
+      "review": "旧导入链，当前游戏版本须验证。根目录许可待确认",
+      "category": "资产与道具",
+      "kind": "模组",
+      "directory": "third_party/AlphaGaming7780-ExtraAssetsImporter",
+      "url": "https://github.com/AlphaGaming7780/ExtraAssetsImporter.git",
+      "commit": "ca20325e69624130e1e8a41755c2e730962b7024",
+      "branch": "main",
+      "commitDate": "2026-08-25T16:37:44+02:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "AlphaGaming7780/ExtraDetailingTools",
+      "role": "对象变换、布景与细节摆放",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "资产与道具",
+      "kind": "模组",
+      "directory": "third_party/AlphaGaming7780-ExtraDetailingTools",
+      "url": "https://github.com/AlphaGaming7780/ExtraDetailingTools.git",
+      "commit": "8c3be4e8bf253ce9f4dd333f37434fa2f72626a9",
+      "branch": "main",
+      "commitDate": "2026-11-05T10:50:12+01:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "AlphaGaming7780/ExtraLib",
+      "role": "Extra 系列的 UI、实体与资产支持代码",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "资产与道具",
+      "kind": "库",
+      "directory": "third_party/AlphaGaming7780-ExtraLib",
+      "url": "https://github.com/AlphaGaming7780/ExtraLib.git",
+      "commit": "5e415ec01445755f10634c2db239850d66d11d76",
+      "branch": "main",
+      "commitDate": "2026-10-29T17:10:09+01:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "klyte45/CS2-WriteEverywhere",
+      "role": "游戏内标牌、字体、图集与文本布局",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "资产与道具",
+      "kind": "模组",
+      "directory": "third_party/klyte45-CS2-WriteEverywhere",
+      "url": "https://github.com/klyte45/CS2-WriteEverywhere.git",
+      "commit": "ac76064f67860d3421a565a25fff1917e15710c2",
+      "branch": "master",
+      "commitDate": "2026-07-27T07:23:07-03:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "klyte45/CS2-WEModuleTemplate",
+      "role": "标牌布局、图集和字体模块模板",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "资产与道具",
+      "kind": "模板",
+      "directory": "third_party/klyte45-CS2-WEModuleTemplate",
+      "url": "https://github.com/klyte45/CS2-WEModuleTemplate.git",
+      "commit": "88437c090b3c0c977c8c55cce0e0dceec46f6f24",
+      "branch": "master",
+      "commitDate": "2025-12-04T12:31:41-03:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "suller-hub/cs2-asset-pack-exporter",
+      "role": "Blender 资产包批量导出、比例和纹理处理",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "资产与道具",
+      "kind": "工具",
+      "directory": "third_party/suller-hub-cs2-asset-pack-exporter",
+      "url": "https://github.com/suller-hub/cs2-asset-pack-exporter.git",
+      "commit": "038a4d84cef27e732a5df354a896896f9929171f",
+      "branch": "main",
+      "commitDate": "2026-03-22T20:07:42+01:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "9db008fc5025e71e3ba3901158d75046bba747f8484b2685d0851b423c17ea57"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "DanOkami/CS2-Exporter-for-Blender",
+      "role": "Blender 网格拆分、UV、材质和 FBX 导出",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "资产与道具",
+      "kind": "工具",
+      "directory": "third_party/DanOkami-CS2-Exporter-for-Blender",
+      "url": "https://github.com/DanOkami/CS2-Exporter-for-Blender.git",
+      "commit": "b934fdd0382eec7ad06d08f6f71aefa10138f6dd",
+      "branch": "main",
+      "commitDate": "2026-08-15T22:35:42+02:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "1bdb09a779c29aab91119256587b9e559f45925bd044643a72afb52c56201a84"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "dvovo/BuildingIconGenerator",
+      "role": "从游戏包读取建筑并批量渲染缩略图",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "资产与道具",
+      "kind": "模组",
+      "directory": "third_party/dvovo-BuildingIconGenerator",
+      "url": "https://github.com/dvovo/BuildingIconGenerator.git",
+      "commit": "a9bfab9c22774b35d25efae1d7ef517bca2d2b7c",
+      "branch": "main",
+      "commitDate": "2026-10-19T19:10:09+02:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "b56782e82004e67767ba5c6a15472875660f9c6c42324614b2f1163cc51afc7f"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Mimonsi/CS2-IntegratedTramStopAssetPack",
+      "role": "集成电车站资产包结构和打包示例",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "资产与道具",
+      "kind": "资产工程",
+      "directory": "third_party/Mimonsi-CS2-IntegratedTramStopAssetPack",
+      "url": "https://github.com/Mimonsi/CS2-IntegratedTramStopAssetPack.git",
+      "commit": "6151d6e79fa337ab07620da333bc51ab81b8f79b",
+      "branch": "main",
+      "commitDate": "2024-07-10T14:25:44+02:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "ST-Apps/CS2-ExtendedRoadUpgrades",
+      "role": "既有道路的附加属性和升级工具",
+      "license": "CC-BY-NC-SA-4.0",
+      "review": "许可证含非商业条款",
+      "category": "路网与场景建造",
+      "kind": "模组",
+      "directory": "third_party/ST-Apps-CS2-ExtendedRoadUpgrades",
+      "url": "https://github.com/ST-Apps/CS2-ExtendedRoadUpgrades.git",
+      "commit": "758eede2669b08d14aa9aa8e9ac313588d702aac",
+      "branch": "master",
+      "commitDate": "2024-03-30T15:35:31+01:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "4a7b306a2a784a19c461e248745d27200735318c74e96921fb8bab817a901b58"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Mimonsi/CS2-ExtraNetworksAndAreas",
+      "role": "隐形道路、区域和可用于组合站点的标记",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "路网与场景建造",
+      "kind": "模组",
+      "directory": "third_party/Mimonsi-CS2-ExtraNetworksAndAreas",
+      "url": "https://github.com/Mimonsi/CS2-ExtraNetworksAndAreas.git",
+      "commit": "8858b69d126fd65278c1145bd3decf648b9d3094",
+      "branch": "main",
+      "commitDate": "2025-12-04T09:47:40+01:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "AlphaGaming7780/ExtraLandscapingTools",
+      "role": "地形笔刷、资源和地表编辑",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "路网与场景建造",
+      "kind": "模组",
+      "directory": "third_party/AlphaGaming7780-ExtraLandscapingTools",
+      "url": "https://github.com/AlphaGaming7780/ExtraLandscapingTools.git",
+      "commit": "83f82d726019d70de45cbce46e9d3e06cc61e246",
+      "branch": "main",
+      "commitDate": "2026-09-23T11:30:58+02:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "yenyang/BetterBulldozer",
+      "role": "细分对象删除、归属与清理",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "路网与场景建造",
+      "kind": "模组",
+      "directory": "third_party/yenyang-BetterBulldozer",
+      "url": "https://github.com/yenyang/BetterBulldozer.git",
+      "commit": "6b9e61797d7076f87e4e8e5ddfe83c7ae1c48a41",
+      "branch": "master",
+      "commitDate": "2026-09-20T09:17:06-07:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "38278a2d2c02a54914160622f17e1c8421c09140208c60fe2549f87657c53621"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "lucarager/CS2-Platter",
+      "role": "手工放置地块并接入原生分区生长",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "路网与场景建造",
+      "kind": "模组",
+      "directory": "third_party/lucarager-CS2-Platter",
+      "url": "https://github.com/lucarager/CS2-Platter.git",
+      "commit": "7580f880561df6c0cb7ea7dea4ebbb4a38a5b76b",
+      "branch": "main",
+      "commitDate": "2026-10-06T12:24:46-07:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "dvovo/CustomZones",
+      "role": "自定义分区与可生成建筑筛选",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "路网与场景建造",
+      "kind": "模组",
+      "directory": "third_party/dvovo-CustomZones",
+      "url": "https://github.com/dvovo/CustomZones.git",
+      "commit": "dd947f4309a601c8858916b1668ba5008bce55d1",
+      "branch": "main",
+      "commitDate": "2026-10-26T18:04:32+01:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "b56782e82004e67767ba5c6a15472875660f9c6c42324614b2f1163cc51afc7f"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "LuxStice/AdvancedRoadTools",
+      "role": "道路两侧分区深度和分区移除",
+      "license": "MIT",
+      "review": "并行道和坡度工具属于上游计划",
+      "category": "路网与场景建造",
+      "kind": "模组",
+      "directory": "third_party/LuxStice-AdvancedRoadTools",
+      "url": "https://github.com/LuxStice/AdvancedRoadTools.git",
+      "commit": "7c9121504c8f748dbad74ba64ce24870930bec19",
+      "branch": "master",
+      "commitDate": "2025-11-05T03:37:22Z",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "5d1e30dbf9712ec17cc735de7590837c670f08acdcf71f43387a6d786f5fc859"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "zilianli/section2change",
+      "role": "整组立交的约束求解、预览和放置",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "路网与场景建造",
+      "kind": "模组",
+      "directory": "third_party/zilianli-section2change",
+      "url": "https://github.com/zilianli/section2change.git",
+      "commit": "12c1d17c6430523f2ffc7360209e7b72176843f2",
+      "branch": "main",
+      "commitDate": "2026-11-04T00:50:57+10:30",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "2dc490123610fca7aa89acb7ff20e37089200b26355b381d5c38bb4fcc6e7679"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "tomkpunkt/ParkManager",
+      "role": "多边形场地、入口、小径和装饰的程序化预览与建造",
+      "license": "GPL-3.0",
+      "review": "已查阅上游说明或源文件",
+      "category": "路网与场景建造",
+      "kind": "模组",
+      "directory": "third_party/tomkpunkt-ParkManager",
+      "url": "https://github.com/tomkpunkt/ParkManager.git",
+      "commit": "914d2ed06bd130d8a4a43afa1ab30cf13ca2ed92",
+      "branch": "main",
+      "commitDate": "2026-10-12T19:43:51+02:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "jasperaelvoet/realistic-road-works",
+      "role": "施工阶段、工程车辆与道路状态变化",
+      "license": "MIT",
+      "review": "上游 README 说明实验项目已下架",
+      "category": "路网与场景建造",
+      "kind": "模组",
+      "directory": "third_party/jasperaelvoet-realistic-road-works",
+      "url": "https://github.com/jasperaelvoet/realistic-road-works.git",
+      "commit": "aa256710feae157bff17b9b870c950e5c88f85c5",
+      "branch": "main",
+      "commitDate": "2026-10-30T19:30:05+01:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "30339e5c626b27289e4fe5b8186b15adb54150c61124b0aed3343cd9f32b5353"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Rollocraft/CS2MultiplayerMod",
+      "role": "多用户建造同步、状态一致性和兼容场景",
+      "license": "CS2 Multiplayer Non-Commercial v1.1",
+      "review": "采用自定义非商业许可",
+      "category": "路网与场景建造",
+      "kind": "模组",
+      "directory": "third_party/Rollocraft-CS2MultiplayerMod",
+      "url": "https://github.com/Rollocraft/CS2MultiplayerMod.git",
+      "commit": "948debf24bcbcb52123a142b944ee5c4e8e30891",
+      "branch": "master",
+      "commitDate": "2026-10-25T13:20:36+01:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "cff1af3fd0391aba5b96537b64174356f78b27750b93aa26806cab615a6ea835"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "AmicusDeus/TransitTimetables",
+      "role": "分时段发车、车队规模、终点站等待和退出",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "公共交通与车辆",
+      "kind": "模组",
+      "directory": "third_party/AmicusDeus-TransitTimetables",
+      "url": "https://github.com/AmicusDeus/TransitTimetables.git",
+      "commit": "4fc4337cb5382dba8f3e273ce8447b7c5b2b0d7e",
+      "branch": "main",
+      "commitDate": "2026-08-16T20:35:35+02:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "06c2648a933cff3ccb85b6ded37000290c7132f495a57954d324e900278dfcf4"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "ZessonsDE/TrafficToolEssentials",
+      "role": "信号相位、绿波、车库区域、调度与交通统计",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "公共交通与车辆",
+      "kind": "模组",
+      "directory": "third_party/ZessonsDE-TrafficToolEssentials",
+      "url": "https://github.com/ZessonsDE/TrafficToolEssentials.git",
+      "commit": "121ec4ad3623f28a8d8eed012361b3ed956f1a1b",
+      "branch": "main",
+      "commitDate": "2026-10-15T03:36:12+02:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "River-Mochi/CS2-AllTransitTrucks",
+      "role": "公共交通车型容量、车库能力和车辆数量",
+      "license": "GPL-3.0",
+      "review": "已查阅上游说明或源文件",
+      "category": "公共交通与车辆",
+      "kind": "模组",
+      "directory": "third_party/River-Mochi-CS2-AllTransitTrucks",
+      "url": "https://github.com/River-Mochi/CS2-AllTransitTrucks.git",
+      "commit": "82c573426392f2257c3308f6a288682900813976",
+      "branch": "main",
+      "commitDate": "2026-10-01T21:49:27-07:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "SonnyX/CS2-TransportPolicyAdjuster",
+      "role": "公交等交通线路的车辆数量策略",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "公共交通与车辆",
+      "kind": "模组",
+      "directory": "third_party/SonnyX-CS2-TransportPolicyAdjuster",
+      "url": "https://github.com/SonnyX/CS2-TransportPolicyAdjuster.git",
+      "commit": "9cee0e070a4ac463f973de6a1a6e43a149076385",
+      "branch": "main",
+      "commitDate": "2026-09-16T20:10:48+02:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "klyte45/CS2-ExtendedTransportManager",
+      "role": "线路、站点连接、车辆分组和票价",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "公共交通与车辆",
+      "kind": "模组",
+      "directory": "third_party/klyte45-CS2-ExtendedTransportManager",
+      "url": "https://github.com/klyte45/CS2-ExtendedTransportManager.git",
+      "commit": "47e735cb90a851ac282aa963633d6aa5f9f94e09",
+      "branch": "master",
+      "commitDate": "2026-09-17T09:17:01-03:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "slyh/Cities2-TrafficLightsEnhancement",
+      "role": "交叉口的信号配置和存档恢复",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "公共交通与车辆",
+      "kind": "模组",
+      "directory": "third_party/slyh-Cities2-TrafficLightsEnhancement",
+      "url": "https://github.com/slyh/Cities2-TrafficLightsEnhancement.git",
+      "commit": "7dabdeedab984333b836c8a6fc022446b9e2bc8a",
+      "branch": "master",
+      "commitDate": "2025-11-10T20:32:56Z",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "BastiAKA/TrafficClearTheWay",
+      "role": "应急车辆优先、事故现场及拖车流程",
+      "license": "Apache-2.0",
+      "review": "已查阅上游说明或源文件",
+      "category": "公共交通与车辆",
+      "kind": "模组",
+      "directory": "third_party/BastiAKA-TrafficClearTheWay",
+      "url": "https://github.com/BastiAKA/TrafficClearTheWay.git",
+      "commit": "791ca0d48d927b8193c5f4338ad5c4c35f9232d6",
+      "branch": "main",
+      "commitDate": "2026-10-19T20:11:47+02:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "06139c38d87678611ab22d5a3b3dbf5dde75c9e1152be2ccbb3dd221fcc1ffb0"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Daotie/CS2-RouteFilter",
+      "role": "道路和轨道按车辆资产过滤通行",
+      "license": "GPL-3.0",
+      "review": "已查阅上游说明或源文件",
+      "category": "公共交通与车辆",
+      "kind": "模组",
+      "directory": "third_party/Daotie-CS2-RouteFilter",
+      "url": "https://github.com/Daotie/CS2-RouteFilter.git",
+      "commit": "564679d96de8bd63d44f3a92dcabdb6a151d86dd",
+      "branch": "main",
+      "commitDate": "2026-11-03T23:38:10+08:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "roll-w/CSL2-StationNaming",
+      "role": "车站、站点和设施命名",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "公共交通与车辆",
+      "kind": "模组",
+      "directory": "third_party/roll-w-CSL2-StationNaming",
+      "url": "https://github.com/roll-w/CSL2-StationNaming.git",
+      "commit": "240b970cbf29b36bd57bc9f092728b9d5b8afdda",
+      "branch": "master",
+      "commitDate": "2026-02-16T00:19:41+08:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "4111b689c02e1dc3413b8e0c79f9dd492e5190e27c90cb1587de62bde4e9ae7c"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "ruzbeh0/RealisticPathFinding",
+      "role": "汽车、公交、行人和自行车寻路成本",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "公共交通与车辆",
+      "kind": "模组",
+      "directory": "third_party/ruzbeh0-RealisticPathFinding",
+      "url": "https://github.com/ruzbeh0/RealisticPathFinding.git",
+      "commit": "3b7cdb23d18db4bf5c7e29381d562122ad211d5f",
+      "branch": "master",
+      "commitDate": "2026-07-27T23:15:17-04:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "ruzbeh0/Time2Work",
+      "role": "市民和游客按工作、上学及休闲安排出行",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "公共交通与车辆",
+      "kind": "模组",
+      "directory": "third_party/ruzbeh0-Time2Work",
+      "url": "https://github.com/ruzbeh0/Time2Work.git",
+      "commit": "ea39b2dcf7f09c54c96a59ee26dace7320889a5b",
+      "branch": "master",
+      "commitDate": "2026-09-15T13:10:40-04:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "algernon-A/FreeRangeCameraLite",
+      "role": "自由镜头的边界、缩放和编辑器支持",
+      "license": "Apache-2.0",
+      "review": "已查阅上游说明或源文件",
+      "category": "镜头、角色与城市事件",
+      "kind": "模组",
+      "directory": "third_party/algernon-A-FreeRangeCameraLite",
+      "url": "https://github.com/algernon-A/FreeRangeCameraLite.git",
+      "commit": "9a8377be46d94c3e2d1a1cebe3aed5a7b980b7a3",
+      "branch": "master",
+      "commitDate": "2024-02-01T17:42:57+11:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "rodrigmatrix/TimeWeatherAnarchy",
+      "role": "拍摄时间、天气和跨存档设置",
+      "license": "Apache-2.0",
+      "review": "已查阅上游说明或源文件",
+      "category": "镜头、角色与城市事件",
+      "kind": "模组",
+      "directory": "third_party/rodrigmatrix-TimeWeatherAnarchy",
+      "url": "https://github.com/rodrigmatrix/TimeWeatherAnarchy.git",
+      "commit": "71128d3958c31b03163a2cba981909655a38bc83",
+      "branch": "main",
+      "commitDate": "2026-05-21T00:02:07-03:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "NyokoDev/PhotoModePreserve",
+      "role": "照片模式状态保留",
+      "license": "MIT",
+      "review": "含早期 BepInEx 入口",
+      "category": "镜头、角色与城市事件",
+      "kind": "模组",
+      "directory": "third_party/NyokoDev-PhotoModePreserve",
+      "url": "https://github.com/NyokoDev/PhotoModePreserve.git",
+      "commit": "9ff71ee83acb7c526e0e50535efd2741508d976a",
+      "branch": "master",
+      "commitDate": "2025-10-28T23:44:05-06:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "72f6ae2b37adc1ea9e8defcaedf231ae1087873f180ec31f447f32a48ae8c75b"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Cgameworld/Compass",
+      "role": "镜头朝向和地图方位提示",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "镜头、角色与城市事件",
+      "kind": "模组",
+      "directory": "third_party/Cgameworld-Compass",
+      "url": "https://github.com/Cgameworld/Compass.git",
+      "commit": "0176c0f8986fb89563d3dc6fc110cfe6c8e8b681",
+      "branch": "master",
+      "commitDate": "2025-10-29T17:43:11-07:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "7edb27eb65096442c4370d1f789839c3dde2a0676bb22b067d603efc1779a609"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Cgameworld/MapTextureReplacer",
+      "role": "地表纹理、地图主题和保存",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "镜头、角色与城市事件",
+      "kind": "模组",
+      "directory": "third_party/Cgameworld-MapTextureReplacer",
+      "url": "https://github.com/Cgameworld/MapTextureReplacer.git",
+      "commit": "fe187a732fe4db14facfce666f3a703d0218b764",
+      "branch": "master",
+      "commitDate": "2026-09-16T00:12:20-07:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "e1108f79aaba6355f6f551c0178a9127fc58ac71c919e679169139b4dbc479f9"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "qstar-inc/cities2-CitizenModelManager",
+      "role": "市民模型查找与外观管理",
+      "license": "AGPL-3.0",
+      "review": "已查阅上游说明或源文件",
+      "category": "镜头、角色与城市事件",
+      "kind": "模组",
+      "directory": "third_party/qstar-inc-cities2-CitizenModelManager",
+      "url": "https://github.com/qstar-inc/cities2-CitizenModelManager.git",
+      "commit": "e2ae42244b7848f59a2e5840740c0d964a075ba5",
+      "branch": "master",
+      "commitDate": "2025-12-04T15:05:27+06:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "6f1e622c82a380075843bb084a7ec3b1f1d12a4a02526d75e78b0924a860aa75"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Crystalhihihi/cs2-citylife",
+      "role": "由事件驱动的市民聚集、城市信息流和世界提示",
+      "license": "MIT",
+      "review": "上游标为开发原型",
+      "category": "镜头、角色与城市事件",
+      "kind": "模组",
+      "directory": "third_party/Crystalhihihi-cs2-citylife",
+      "url": "https://github.com/Crystalhihihi/cs2-citylife.git",
+      "commit": "efad2c32b3bd33b2f84ab7fd0acf0045d785b137",
+      "branch": "master",
+      "commitDate": "2026-09-21T22:20:18+08:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "16f7cec1d1486d33973bb3d13209e080c29d1010ab29a0b1ecb2278f71c9f1fe"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Daotie/CS2-CityPress",
+      "role": "从模拟数据采集城市事件并呈现时间记录",
+      "license": "GPL-3.0",
+      "review": "已查阅上游说明或源文件",
+      "category": "镜头、角色与城市事件",
+      "kind": "模组",
+      "directory": "third_party/Daotie-CS2-CityPress",
+      "url": "https://github.com/Daotie/CS2-CityPress.git",
+      "commit": "8522bd6a174706391aa6ac64e7f745f2920cb66c",
+      "branch": "main",
+      "commitDate": "2026-11-03T23:38:47+08:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "0b383d5a63da644f628d99c33976ea6487ed89aaa59f0b3257992deac1171e6b"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "williamlang/city-storytelling-mod",
+      "role": "ECS 城市快照、事件和外部叙事代理",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "镜头、角色与城市事件",
+      "kind": "模组",
+      "directory": "third_party/williamlang-city-storytelling-mod",
+      "url": "https://github.com/williamlang/city-storytelling-mod.git",
+      "commit": "6749dd0faaf63f1905ac452a7bbf461df3d0562f",
+      "branch": "main",
+      "commitDate": "2026-09-15T10:12:47-07:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "5aa96e73755a5558f2c71b7defd1dbc3cac7c47c1da8b8de2e52d6d58f30e072"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "taipei-native/Carto",
+      "role": "导出城市路网、交通路线、建筑、地形和水深",
+      "license": "MIT",
+      "review": "仓库主许可为 MIT，另有第三方地理库条款",
+      "category": "地图、地理数据与规划",
+      "kind": "模组",
+      "directory": "third_party/taipei-native-Carto",
+      "url": "https://github.com/taipei-native/Carto.git",
+      "commit": "0c7235eba43a3f05c2cc478ede17319a1622ca7a",
+      "branch": "main",
+      "commitDate": "2026-10-13T16:57:41+08:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "027e18c911a588d3c996368cd98701c784b2bb699b4b90160ab0a6b694fb5ee7"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "algernon-A/ImageOverlay",
+      "role": "导入、对齐和调整游戏地图上的参考图",
+      "license": "Apache-2.0",
+      "review": "已查阅上游说明或源文件",
+      "category": "地图、地理数据与规划",
+      "kind": "模组",
+      "directory": "third_party/algernon-A-ImageOverlay",
+      "url": "https://github.com/algernon-A/ImageOverlay.git",
+      "commit": "bd5aad053b06f1a2391e40cb8f03640d25e4a00c",
+      "branch": "master",
+      "commitDate": "2026-11-04T14:41:10+11:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "algernon-A/ImageOverlayLite",
+      "role": "早期地图叠图系统",
+      "license": "Apache-2.0",
+      "review": "上游标为已弃用，优先看完整 Image Overlay",
+      "category": "地图、地理数据与规划",
+      "kind": "模组",
+      "directory": "third_party/algernon-A-ImageOverlayLite",
+      "url": "https://github.com/algernon-A/ImageOverlayLite.git",
+      "commit": "416f3956f1856d8c834ee9286a694282dc6abe84",
+      "branch": "master",
+      "commitDate": "2024-04-11T09:23:25+10:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "aous-afk/skyplan",
+      "role": "在游戏地图上绘制 SVG 道路、公交和区域草图",
+      "license": "unconfirmed",
+      "review": "草图叠层用于规划预览。根目录许可待确认",
+      "category": "地图、地理数据与规划",
+      "kind": "模组",
+      "directory": "third_party/aous-afk-skyplan",
+      "url": "https://github.com/aous-afk/skyplan.git",
+      "commit": "911d8526a63474cc2233196088cf3c148b0a0085",
+      "branch": "main",
+      "commitDate": "2026-10-17T17:46:21+02:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "postblink/cs2-map-importer",
+      "role": "按地点生成高度图与街道参考叠图",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "地图、地理数据与规划",
+      "kind": "工具",
+      "directory": "third_party/postblink-cs2-map-importer",
+      "url": "https://github.com/postblink/cs2-map-importer.git",
+      "commit": "00120bf99b6bb0afeaae079c5ecc23eae4e1817e",
+      "branch": "main",
+      "commitDate": "2026-09-24T01:39:39Z",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "AuroraCrimsonRose/CityPrint",
+      "role": "读取地图导出并交互浏览或生成地图",
+      "license": "Apache-2.0",
+      "review": "已查阅上游说明或源文件",
+      "category": "地图、地理数据与规划",
+      "kind": "工具",
+      "directory": "third_party/AuroraCrimsonRose-CityPrint",
+      "url": "https://github.com/AuroraCrimsonRose/CityPrint.git",
+      "commit": "c0a56cd29a4918b4c76193b473ababc91e156f02",
+      "branch": "main",
+      "commitDate": "2026-10-26T06:28:14-05:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "47b2b7375318c574ef44d0def1e28d296e8bac5940d24d2694f5d99e7053b780"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "kentherussell/ImportEarthLocation",
+      "role": "真实地点的地形、道路和铁路导入",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "地图、地理数据与规划",
+      "kind": "模组",
+      "directory": "third_party/kentherussell-ImportEarthLocation",
+      "url": "https://github.com/kentherussell/ImportEarthLocation.git",
+      "commit": "f70a5bf41b0e4b642e2fc49bb11c6b0f414c1b41",
+      "branch": "main",
+      "commitDate": "2026-11-04T15:03:28-05:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "42e4f733d52eefb7e7c4f372eae9b852c3161cc0f0d4a4c624fb5a4c9328f99b"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Giscolab/CityTimeline-Mod",
+      "role": "GeoJSON 图层注入、对齐与历史地理可视化",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "地图、地理数据与规划",
+      "kind": "模组",
+      "directory": "third_party/Giscolab-CityTimeline-Mod",
+      "url": "https://github.com/Giscolab/CityTimeline-Mod.git",
+      "commit": "4dfe123ac583d12498fe3c2ed83b06d2f7703192",
+      "branch": "main",
+      "commitDate": "2026-08-31T23:12:35+02:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Giscolab/cs2-realmap-generator",
+      "role": "OSM 提取、要素分类、GeoJSON 和地形制备",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "地图、地理数据与规划",
+      "kind": "工具",
+      "directory": "third_party/Giscolab-cs2-realmap-generator",
+      "url": "https://github.com/Giscolab/cs2-realmap-generator.git",
+      "commit": "937e1a86bbd71d8bd78ba6ac78457c7c00510251",
+      "branch": "main",
+      "commitDate": "2026-09-27T19:44:28+02:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "ef1be86a341d467bb144a2d0093792630c332c004c46e5e1adf693499a173ff2"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "WFMinerva/cs2-real-map-toolkit",
+      "role": "真实地理数据制备、铺轨和车站原生放置",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "地图、地理数据与规划",
+      "kind": "工具与模组",
+      "directory": "third_party/WFMinerva-cs2-real-map-toolkit",
+      "url": "https://github.com/WFMinerva/cs2-real-map-toolkit.git",
+      "commit": "77bff7ef28c6b2ff71482f64393a312d3cbc3d9d",
+      "branch": "main",
+      "commitDate": "2026-09-30T12:26:03+08:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "84edb1cc99b0fb5d331e56f7df2c730b0605f53b9f924b808df7b94eed2eb48c"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "hansheikimetsamaa/Planboard",
+      "role": "把工程备注和任务锚定到道路、建筑、区域和地面",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "地图、地理数据与规划",
+      "kind": "模组",
+      "directory": "third_party/hansheikimetsamaa-Planboard",
+      "url": "https://github.com/hansheikimetsamaa/Planboard.git",
+      "commit": "3785e41101e9e3c6cb255f71a5f3f5089f7bb2ae",
+      "branch": "main",
+      "commitDate": "2026-08-15T10:35:01+03:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "dfac0276aa45bb69f3ca4aa6852e48d8d5db52871f0a44f95cf31ee9478ea842"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "CitiesSkylinesModding/agents-plugins",
+      "role": "Unity/ECS、Gameface UI、游戏日志和场景测试工具",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "开发、调试与兼容性",
+      "kind": "开发工具",
+      "directory": "third_party/CitiesSkylinesModding-agents-plugins",
+      "url": "https://github.com/CitiesSkylinesModding/agents-plugins.git",
+      "commit": "9c33e68ea4416bdb06ddd0aa599a76d748dcbda5",
+      "branch": "main",
+      "commitDate": "2026-11-04T18:13:42+01:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "fe3eb04453d68f040c9ac5805014eebeb04801c5dbd6e8b1fcaaae2d161de0b6"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "mayor-modder/Cities2-MCP",
+      "role": "本地游戏百科、资料检索和模组工程辅助",
+      "license": "MIT",
+      "review": "定位为知识与开发 MCP",
+      "category": "开发、调试与兼容性",
+      "kind": "开发工具",
+      "directory": "third_party/mayor-modder-Cities2-MCP",
+      "url": "https://github.com/mayor-modder/Cities2-MCP.git",
+      "commit": "5482dc73c6faf3fdf7c97b1b6567dce18014e163",
+      "branch": "main",
+      "commitDate": "2026-10-31T17:11:44-04:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "68117077bd5bdabfb3cd9a62d381ad60890f5e648f9dcf26010492aefa3dc7ae"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "krzychu124/SceneExplorer",
+      "role": "检查已选对象、ECS 组件和实体引用",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "开发、调试与兼容性",
+      "kind": "模组",
+      "directory": "third_party/krzychu124-SceneExplorer",
+      "url": "https://github.com/krzychu124/SceneExplorer.git",
+      "commit": "98df244b972e2f35aebc379e0ce808b8a522811a",
+      "branch": "main",
+      "commitDate": "2026-01-19T22:48:39+01:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "BrokeAssSoftware/cs2-modding-guide",
+      "role": "按技术分类的带源码出处的开发手册",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "开发、调试与兼容性",
+      "kind": "文档",
+      "directory": "third_party/BrokeAssSoftware-cs2-modding-guide",
+      "url": "https://github.com/BrokeAssSoftware/cs2-modding-guide.git",
+      "commit": "1903c032ccb3b005eef83901ba3918f2f5652258",
+      "branch": "integration",
+      "commitDate": "2026-07-06T00:43:52-06:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "0bee7bc4d56c9fb3ab2a544798c1aaeeb1c8a4a32ac4cb86fb2d54948a5aaccf"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Cities2Modding/wiki",
+      "role": "地图编辑器和早期 CS2 开发资料",
+      "license": "CC-BY-NC-SA-4.0",
+      "review": "已查阅上游说明或源文件",
+      "category": "开发、调试与兼容性",
+      "kind": "文档",
+      "directory": "third_party/Cities2Modding-wiki",
+      "url": "https://github.com/Cities2Modding/wiki.git",
+      "commit": "0120a36ed764c656786c5219b310ead0c91302be",
+      "branch": "master",
+      "commitDate": "2023-12-17T14:56:30+01:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "1095f00eaa8aa446f47e65796bbc0edf2553edb12f12de56b1b672eadda6c691"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "CitiesSkylinesModding/StockModTemplatesDiffer",
+      "role": "官方 C# 与 UI 模组模板的版本对比",
+      "license": "Unlicense",
+      "review": "已查阅上游说明或源文件",
+      "category": "开发、调试与兼容性",
+      "kind": "模板",
+      "directory": "third_party/CitiesSkylinesModding-StockModTemplatesDiffer",
+      "url": "https://github.com/CitiesSkylinesModding/StockModTemplatesDiffer.git",
+      "commit": "1d7c741d14e61c6e2e55b720d61f39a85a56f87f",
+      "branch": "main",
+      "commitDate": "2026-06-24T15:31:34+02:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "436a6d536138f203ac333858cff92a568be62797752b3adb94bcaa0f6ffe7ef6"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Captain-Of-Coit/cities-skylines-2-mod-template",
+      "role": "早期 C#、BepInEx 与发布脚手架",
+      "license": "MIT-template",
+      "review": "许可证文本含作者及年份占位符",
+      "category": "开发、调试与兼容性",
+      "kind": "模板",
+      "directory": "third_party/Captain-Of-Coit-cities-skylines-2-mod-template",
+      "url": "https://github.com/Captain-Of-Coit/cities-skylines-2-mod-template.git",
+      "commit": "70466122fb57d78c4899b854ccad8799623e0df6",
+      "branch": "master",
+      "commitDate": "2023-11-28T23:38:18+01:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "6458b75f76393ec7690f55451b0fa73d8175218856596a799b7d358df36a82b2"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Captain-Of-Coit/hookui",
+      "role": "旧版游戏 UI 注入与 React 嵌入",
+      "license": "MIT",
+      "review": "上游标为已弃用",
+      "category": "开发、调试与兼容性",
+      "kind": "库",
+      "directory": "third_party/Captain-Of-Coit-hookui",
+      "url": "https://github.com/Captain-Of-Coit/hookui.git",
+      "commit": "d534495910a004d140aac43b669add92d9571b16",
+      "branch": "master",
+      "commitDate": "2024-08-26T16:02:46+02:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "eaa1e61cf8f6befb59df7f9c3a2587415859fb4607f3a63d180755c4bc7d4bcd"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "algernon-A/UnifiedIconLibrary",
+      "role": "共享游戏风格图标和 UI 资源",
+      "license": "Apache-2.0",
+      "review": "已查阅上游说明或源文件",
+      "category": "开发、调试与兼容性",
+      "kind": "库",
+      "directory": "third_party/algernon-A-UnifiedIconLibrary",
+      "url": "https://github.com/algernon-A/UnifiedIconLibrary.git",
+      "commit": "b200d8901346457f97c032e86e1d8437a12c0cc8",
+      "branch": "master",
+      "commitDate": "2026-05-02T21:18:25+10:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "JadHajjar/Skyve-CS2",
+      "role": "模组配置、兼容性和游玩组合管理",
+      "license": "unconfirmed",
+      "review": "根目录许可待确认",
+      "category": "开发、调试与兼容性",
+      "kind": "工具",
+      "directory": "third_party/JadHajjar-Skyve-CS2",
+      "url": "https://github.com/JadHajjar/Skyve-CS2.git",
+      "commit": "42ca0615994e55da04287a766b7f8f35331d75d2",
+      "branch": "main",
+      "commitDate": "2026-06-22T18:06:47+02:00",
+      "shallow": true,
+      "licenseFiles": [],
+      "runtimeTested": false
+    },
+    {
+      "repository": "rcav8tr/CS2Mod-PerformanceMonitor",
+      "role": "帧时间和游戏性能面板",
+      "license": "MIT",
+      "review": "已查阅上游说明或源文件",
+      "category": "开发、调试与兼容性",
+      "kind": "模组",
+      "directory": "third_party/rcav8tr-CS2Mod-PerformanceMonitor",
+      "url": "https://github.com/rcav8tr/CS2Mod-PerformanceMonitor.git",
+      "commit": "806a352133ecd7a0b322794e0af4cadc176877d9",
+      "branch": "master",
+      "commitDate": "2026-04-29T08:35:47-05:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "8d8b11f269432fc373063d4606598f5a2432407f944e5e1f3dc6ebd2933563fb"
+        }
+      ],
+      "runtimeTested": false
+    },
+    {
+      "repository": "Theorist100/VanillaProfiler",
+      "role": "Unity 主线程、同步点和内存分析",
+      "license": "MIT-code / separate asset terms",
+      "review": "源码 MIT，项目另设资产条款",
+      "category": "开发、调试与兼容性",
+      "kind": "模组",
+      "directory": "third_party/Theorist100-VanillaProfiler",
+      "url": "https://github.com/Theorist100/VanillaProfiler.git",
+      "commit": "16d10b4283f31e747a2659ba7cc61efaecdce295",
+      "branch": "main",
+      "commitDate": "2026-07-28T15:39:03+03:00",
+      "shallow": true,
+      "licenseFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "dbfc34aa159f31506de16d198bab5f2a19d12c6e03349faf752086504e1de561"
+        }
+      ],
+      "runtimeTested": false
+    }
+  ],
+  "unresolved": [
+    {
+      "name": "Flex It",
+      "author": "Root Of Business",
+      "url": "https://mods.paradoxplaza.com/mods/151744/Windows",
+      "status": "public-source-not-located",
+      "note": "截至 2026-11-07，GitHub 名称、C# 和 Skylines README 搜索未找到可核实的源码仓库或许可证；不将此解释为确定闭源。Unsquare README 链接此模组，并声明不含 Flex It 代码。"
+    }
+  ],
+  "capturedAt": "2026-11-06T18:14:26.476Z"
+}

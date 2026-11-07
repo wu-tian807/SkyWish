@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <AssemblyName>CityDirector</AssemblyName>
+    <RootNamespace>CityDirector</RootNamespace>
+    <Version>0.3.4</Version>
+    <GamePath Condition="'$(GamePath)' == ''">$(CS2_PATH)</GamePath>
+    <ManagedPath>$(GamePath)\Cities2_Data\Managed</ManagedPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\..\artifacts\mod\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AssetLibraryInput.js" LogicalName="CityDirector.AssetLibraryInput.js" />
+    <Reference Include="cohtml.Net"><HintPath>$(ManagedPath)\cohtml.Net.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Colossal.Localization"><HintPath>$(ManagedPath)\Colossal.Localization.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Compile Include="..\Shared\AssetDeletion.cs" Link="AssetDeletion.cs" />
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(ManagedPath)\UnityEngine.TextRenderingModule.dll</HintPath><Private>false</Private></Reference>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+    <Reference Include="Game;Colossal.Core;Colossal.Logging;Colossal.Serialization;Colossal.IO.AssetDatabase;Colossal.AssetPipeline;Colossal.UI;Unity.Entities;Unity.Collections;Unity.Mathematics;Unity.Jobs;Unity.Burst;UnityEngine;UnityEngine.CoreModule;UnityEngine.IMGUIModule;UnityEngine.InputLegacyModule;UnityEngine.ImageConversionModule;Newtonsoft.Json">
+      <HintPath>$(ManagedPath)\%(Identity).dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="CheckGamePath" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(ManagedPath)\Game.dll')" Text="Set CS2_PATH or pass -p:GamePath to your Cities Skylines II installation." />
+  </Target>
+</Project>

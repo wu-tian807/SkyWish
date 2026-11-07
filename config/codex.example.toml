@@ -1,0 +1,10 @@
+# Merge this table into your Codex config after reviewing it.
+# This is a configuration example, not an active registration.
+# Adjust these two absolute paths if the workspace moves.
+[mcp_servers.city_director]
+command = 'C:\Program Files\nodejs\node.exe'
+args = ['D:\Resources\workspace\city-builder\src\harness\server.mjs']
+cwd = 'D:\Resources\workspace\city-builder'
+startup_timeout_sec = 10
+tool_timeout_sec = 60
+enabled_tools = ['director_status', 'director_game_state', 'director_find_assets', 'director_reference_sources', 'director_validate_asset', 'director_stage_asset', 'director_import_asset', 'director_import_status', 'director_asset_library', 'director_archive_asset', 'director_menu_tree', 'director_menu_assets', 'director_assign_asset_category']

@@ -1,0 +1,13 @@
+third_party/
+.source-cache/
+.tools/
+.cache/
+node_modules/
+artifacts/
+asset-library/
+**/__pycache__/
+**/bin/
+**/obj/
+*.local.json
+*.local.toml
+*.user
